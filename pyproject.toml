@@ -1,0 +1,25 @@
+[project]
+name = "subscription_service"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.115.6",
+    "temporalio>=1.9.0",
+    "uvicorn[standard]>=0.34.0",
+]
+
+[project.scripts]
+subscription_service = "subscription_service.__main__:main"
+
+[dependency-groups]
+dev = [
+    "black>=24.10.0",
+    "pyright>=1.1.391",
+]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+include = ["src"]
