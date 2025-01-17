@@ -28,3 +28,7 @@ def main():
     logging.basicConfig(level="INFO")
     uvloop_setup()
     asyncio.run(serve())
+
+
+if __name__ == "__main__":
+    main()
